@@ -126,7 +126,7 @@ body {
     background-color: #4D4D4D;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 
     .title {
         position: absolute;
