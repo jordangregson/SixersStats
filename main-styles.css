@@ -14,7 +14,7 @@
 }
 
 header {
-    background-color: #FF7F24;
+    background-color: rgb(84, 84, 240);
 }
 
 a {
@@ -23,28 +23,28 @@ a {
 
 .title {
     font-size: 5vw;
-    color: white;
+    color: red;
     font-family: 'Audiowide', cursive;
 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: white;
 }
 
 #display-date {
     text-align: center;
     font-size: 2vw;
-    background-color: #FF7F24;
-    color: white;
+    background-color: rgb(84, 84, 240);
+    color: red;
     padding-left: 15vw;
 
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: white;
 }
 
 .current-page {
     
 
-    background-color:#B47E58;
+    background-color:rgb(209, 0, 0);
     border-radius: 41px;
     border: black 50px;
     color: white;
@@ -55,7 +55,7 @@ a {
 }
 
 .mainbck {
-    background-color: #FF7F24;
+    background-color: rgb(84, 84, 240);
     border-radius: 20px;
 }
 
@@ -77,7 +77,7 @@ a {
 }
 
 .btn-bck {
-    background-color: #FF9A52;
+    background-color: rgb(255, 83, 83);
     border-radius: 41px;
     border: black 50px;
     color: white;
