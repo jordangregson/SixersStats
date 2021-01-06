@@ -1,0 +1,220 @@
+* {
+    
+    font-family: 'Do Hyeon', sans-serif;
+    margin: 0;
+    
+}
+
+.dropdown {
+    display: none;
+}
+
+.dropdown_toggle {
+    display: none;
+}
+
+header {
+    background-color: #FF7F24;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 5vw;
+    color: white;
+    font-family: 'Audiowide', cursive;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#display-date {
+    text-align: center;
+    font-size: 2vw;
+    background-color: #FF7F24;
+    color: white;
+    padding-left: 15vw;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.current-page {
+    
+
+    background-color:#B47E58;
+    border-radius: 41px;
+    border: black 50px;
+    color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.mainbck {
+    background-color: #FF7F24;
+    border-radius: 20px;
+}
+
+.main-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    padding: 10px;
+
+    height: 98vh;
+    
+}
+
+.top-bar {
+    padding-left: 1vw;
+    padding-top: 1vw;
+}
+
+.btn-bck {
+    background-color: #FF9A52;
+    border-radius: 41px;
+    border: black 50px;
+    color: white;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.navbar {
+    padding-top: 1.5vw;
+    text-align: center;
+    font-size: 3vw;
+
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
+
+.navbar-btn {
+    margin-left: 3vw;
+    margin-right: 3vw;
+
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+body {
+    
+    background-color: #4D4D4D;
+}
+
+.main-area {
+    
+    margin-top: 3vw;
+
+    border-radius: 20px;
+
+    
+}
+
+.teams-playing {
+
+    margin-top: 20px;
+    background-color: #4D4D4D;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .title {
+        position: absolute;
+        right: 0;
+        padding-right: 80px;
+    }
+    
+    header {
+        height: 40px;
+    }
+
+    .navbar {
+		display: none;
+	}
+
+	.webpage_name {
+		margin-top: 0em;
+		font-size: 22pt;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		color: white;
+	}
+
+	.dropdown {
+        display: none;
+        margin-top: 17px;
+		background-color: #FF7F24;
+		width: 100%;
+	}
+
+	.dropdown li {
+		margin-left: 1em;
+		list-style: none;
+        font-size: 25pt;
+        width: 250px;
+		font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		line-height: 2;
+	}
+
+	.dropdown a {
+		display: fixed;
+        margin-left: 10px;
+		text-decoration: none;
+		color: white;
+	}
+
+	.dropdown_toggle:checked ~ .dropdown {
+		display: flex;
+		}
+
+	.dropdown_toggle {
+		display: none;
+	}
+
+	.dropdown_toggle_label {
+		position: absolute;
+		top: 0;
+        bottom: 0;
+        left: 0;
+		margin: 20px;
+		align-content: center;
+	}
+	
+	.dropdown_toggle_label span,
+	.dropdown_toggle_label span::before,
+	.dropdown_toggle_label span::after {
+		display: block;
+		background: white;
+		height: 4px;
+		width: 2em;
+		position: relative;
+	}
+
+	.dropdown_toggle_label span::before,
+	.dropdown_toggle_label span::after {
+		content: "";
+		position: absolute;
+	}
+
+	.dropdown_toggle_label span::before {
+		bottom: 10px;
+	}
+
+	.dropdown_toggle_label span::after {
+		top: 10px;
+    }
+    
+    #display-date {
+        display: none;
+    }
+}

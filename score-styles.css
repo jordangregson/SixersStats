@@ -1,0 +1,125 @@
+.main-area {
+    text-align: center;
+}
+
+.main-area-bck {
+    background-color: #4D4D4D;
+}
+
+.gip {
+    color: white;
+    font-size: 14pt;
+}
+
+#gip-answer {
+    padding-bottom: 20px;
+}
+
+#flyers {
+    background-color: #4D4D4D;
+
+    font-size: 4vw;
+
+    margin-top: 10vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#opponent {
+    background-color: #4D4D4D;
+
+    font-size: 4vw;
+
+    margin-top: 10vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#teams-playing-txt {
+    color: white;
+
+    font-size: 3vw;
+
+    padding-top: 1vw;
+}
+
+.teams-playing {
+    color: white;
+
+    padding-top: 2vw;
+}
+
+#flyers-score {
+    font-size: 4vw;
+
+    margin-top: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+#opponents-score {
+    font-size: 4vw;
+
+    margin-top: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+.score {
+    margin-right: 2vw;
+    margin-top: 5vw;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #teams-playing-txt {
+        color: white;
+    
+        font-size: 6vw;
+    
+        padding-top: 1vw;
+    }
+
+    #flyers {
+        background-color: #4D4D4D;
+    
+        font-size: 16pt;
+    
+        margin-top: 10vw;
+        margin-left: 1vw;
+        margin-right: 10vw;
+    }
+    
+    #opponent {
+        background-color: #4D4D4D;
+    
+        font-size: 16pt;
+    
+        margin-top: 10vw;
+        margin-left: 10vw;
+        margin-right: 1vw;
+    }
+
+    #flyers-score {
+        font-size: 25pt;
+    
+        margin-top: 10vw;
+        margin-left: 1vw;
+        margin-right: 18vw;
+    }
+    
+    #opponents-score {
+        font-size: 25pt;
+    
+        margin-top: 10vw;
+        margin-left: 18vw;
+        margin-right: 1vw;
+    }
+    
+    .score {
+        margin-right: 2vw;
+        margin-top: 5vw;
+    }
+
+
+}
