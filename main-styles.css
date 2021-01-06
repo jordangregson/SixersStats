@@ -131,7 +131,7 @@ body {
     .title {
         position: absolute;
         right: 0;
-        
+        padding-right: 40px;
         font-size: 18pt;
 
         -webkit-text-stroke-width: .5px;
