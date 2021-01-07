@@ -5,13 +5,10 @@ function gameInProgress(apiDate) {
     var today = new Date();
 
     var date = today.getDate();
-    var numDayOfWeek = today.getDay();
     var numMonth = today.getMonth();
     var year = today.getFullYear();
 
     var month;
-
-    console.log(numMonth);
 
 
     if (numMonth == "0") {
@@ -62,7 +59,7 @@ function gameInProgress(apiDate) {
         month = "Dec";
     }
 
-    console.log(month);
+    
 
     var apiDate;
     apiDate = year + "-" + month + "-" + date;
@@ -75,60 +72,68 @@ function gameInProgress(apiDate) {
             return response.json();
         })
         .then(data => {
-            console.log(data);
+            //THIS IS AN ALGORITHM DESIGNED TO SEE WHICH ARRAY THE SIXERS GAME TAKES PLACE IN
 
-            //THIS IS A TOOL DESIGNED TO SEE WHICH ARRAY THE SIXERS GAME TAKES PLACE IN
+            for(var i = 0; i < data.length; i++) {
+                if(data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
+                    console.log(data[i]);
+                    
+                    var teamsPlaying;
+                    teamsPlaying = document.getElementById("teams-playing-txt");
+                    teamsPlaying.textContent = data[i].AwayTeam + " at " + data[i].HomeTeam;
+                    
+                    var awayName;
+                    awayName =document.getElementById("away");
+                    awayName.textContent = data[i].AwayTeam;
 
-            if (data[0].HomeTeamID == 7 | data[0].AwayTeamID == 7) {
-                console.log("0");
+                    var homeName;
+                    homeName =document.getElementById("home");
+                    homeName.textContent = data[i].HomeTeam;
+
+                    if(data[i].HomeTeamID === 7) {
+                        var sixersHome;
+                        sixersHome = document.getElementById("home-score");
+                        sixersHome.textContent = data[i].HomeTeamScore;
+                        
+
+                    }
+
+                    else if(data[i].AwayTeamID === 7) {
+                        var sixersAway;
+                        sixersAway = document.getElementById("away-score");
+                        sixersAway.textContent = data[i].AwayTeamScore;
+                    
+
+                    }
+
+                    if(data[i].HomeTeamID !== 7) {
+                        var opponentHome;
+                        opponentHome = document.getElementById("home-score");
+                        opponentHome.textContent = data[i].HomeTeamScore;
+                        
+                    }
+
+                    if(data[i].AwayTeamID !== 7) {
+                        var opponentAway;
+                        opponentAway = document.getElementById("away-score");
+                        opponentAway.textContent = data[i].AwayTeamScore;
+                        
+
+                    }
+
+                    
+                    
+
+
+
+
+
+                }
+                
             }
-
-            else if (data[1].HomeTeamID == 7| data[1].AwayTeamID == 7) {
-                console.log("1");
-            }
-
-            else if (data[2].HomeTeamID == 7| data[2].AwayTeamID == 7) {
-                console.log("2");
-            }
-
-            else if (data[3].HomeTeamID == 7| data[3].AwayTeamID == 7) {
-                console.log("3");
-            }
-
-            else if (data[4].HomeTeamID == 7| data[4].AwayTeamID == 7) {
-                console.log("4");
-            }
-
-            else if (data[5].HomeTeamID == 7| data[5].AwayTeamID == 7) {
-                console.log("5");
-            }
-
-            else if (data[6].HomeTeamID == 7| data[6].AwayTeamID == 7) {
-                console.log("6");
-            }
-
-            else if (data[7].HomeTeamID == 7| data[7].AwayTeamID == 7) {
-                console.log("7");
-            }
-
-            else if (data[8].HomeTeamID == 7| data[8].AwayTeamID == 7) {
-                console.log("8");
-            }
-
-            else if (data[9].HomeTeamID == 7| data[9].AwayTeamID == 7) {
-                console.log("9");
-            }
-
-            else if (data[10].HomeTeamID == 7| data[10].AwayTeamID == 7) {
-                console.log("10");
-            }
-
-            else if (data[11].HomeTeamID == 7| data[11].AwayTeamID == 7) {
-                console.log("11");
-            }
-
-
 
         })
 }
 gameInProgress();
+
+setInterval(gameInProgress, 30000);

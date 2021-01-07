@@ -15,7 +15,7 @@
     padding-bottom: 20px;
 }
 
-#flyers {
+#away {
     background-color: #4D4D4D;
 
     font-size: 4vw;
@@ -25,7 +25,7 @@
     margin-right: 10vw;
 }
 
-#opponent {
+#home {
     background-color: #4D4D4D;
 
     font-size: 4vw;
@@ -49,7 +49,7 @@
     padding-top: 2vw;
 }
 
-#flyers-score {
+#away-score {
     font-size: 4vw;
 
     margin-top: 10vw;
@@ -57,7 +57,7 @@
     margin-right: 15vw;
 }
 
-#opponents-score {
+#home-score {
     font-size: 4vw;
 
     margin-top: 10vw;
@@ -70,50 +70,72 @@
     margin-top: 5vw;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
+
+    .gip {
+        font-size: 6vw;
+
+        position: relative;
+        top: 5vw;
+    }
 
     #teams-playing-txt {
         color: white;
     
-        font-size: 6vw;
+        position: relative;
+        top: 10vw;
+
+        font-size: 8vw;
     
         padding-top: 1vw;
     }
 
-    #flyers {
+    #home {
         background-color: #4D4D4D;
     
-        font-size: 16pt;
+        font-size: 40pt;
+
+        position: relative;
+        top: 20vw;
     
         margin-top: 10vw;
-        margin-left: 1vw;
+        margin-left: 15vw;
         margin-right: 10vw;
     }
     
-    #opponent {
+    #away {
         background-color: #4D4D4D;
     
-        font-size: 16pt;
+        font-size: 40pt;
     
+        position: relative;
+        top: 20vw;
+
         margin-top: 10vw;
         margin-left: 10vw;
-        margin-right: 1vw;
+        margin-right: 15vw;
     }
 
-    #flyers-score {
-        font-size: 25pt;
+    #home-score {
+        font-size: 45pt;
+
+        position: relative;
+        top: 25vw;
     
-        margin-top: 10vw;
-        margin-left: 1vw;
-        margin-right: 18vw;
+        margin-top: 40vw;
+        margin-left: 20vw;
+        margin-right: 5vw;
     }
     
-    #opponents-score {
-        font-size: 25pt;
+    #away-score {
+        font-size: 45pt;
+
+        position: relative;
+        top: 25vw;
     
         margin-top: 10vw;
-        margin-left: 18vw;
-        margin-right: 1vw;
+        margin-left: 5vw;
+        margin-right: 20vw;
     }
     
     .score {

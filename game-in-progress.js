@@ -5,13 +5,13 @@ function gameInProgress(apiDate) {
     var today = new Date();
 
     var date = today.getDate();
-    var numDayOfWeek = today.getDay();
+    
     var numMonth = today.getMonth();
     var year = today.getFullYear();
 
     var month;
 
-    console.log(numMonth);
+    
 
 
     if (numMonth == "0") {
@@ -62,22 +62,38 @@ function gameInProgress(apiDate) {
         month = "Dec";
     }
 
-    console.log(month);
+    
 
     var apiDate;
     apiDate = year + "-" + month + "-" + date;
 
 
-    const api_url = ``;
+    const api_url = `https://api.sportsdata.io/v3/nba/scores/json/GamesByDate/${apiDate}?key=c8b0f33081df4e169dee41736301a0eb`;
 
     fetch(api_url)
         .then(response => {
             return response.json();
         })
         .then(data => {
-            console.log(data);
+            
 
+            for(var i = 0; i < data.length; i++) {
+                if(data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
+                    if(data[i].HomeTeamScore === "null" && data[i].AwayTeamScore === "null") {
+                        var gameIsNotHappening;
+                        gameIsNotHappening = document.getElementById("gip-answer");
+                        gameIsNotHappening.textContent = "No";
+                    }
 
+                    else if(data[i].HomeTeamScore !== "null" && data[i].AwayTeamScore !== "null") {
+                        var gameIsHappening;
+                        gameIsHappening = document.getElementById("gip-answer");
+                        gameIsHappening.textContent = "Yes";
+                    }
+
+                    
+                }
+            }
 
 
         })
