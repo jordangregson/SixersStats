@@ -93,45 +93,49 @@
     #home {
         background-color: #4D4D4D;
     
-        font-size: 13vw;
+        font-size: 36pt;
 
-        position: absolute;
-        top: 60vw;
-        left: 55vw;
-        
+        position: relative;
+        top: 20vw;
+    
+        margin-top: 10vw;
+        margin-left: 13vw;
+        margin-right: 1vw;
     }
     
     #away {
         background-color: #4D4D4D;
     
-        font-size: 13vw;
+        font-size: 35pt;
     
-        position: absolute;
-        top: 60vw;
-        right: 55vw;
+        position: relative;
+        top: 20vw;
 
-        
+        margin-top: 10vw;
+        margin-left: 1vw;
+        margin-right: 13vw;
     }
 
     #home-score {
         font-size: 45pt;
 
-        position: absolute;
-        top: 83vw;
-        left: 50vw;
-        right: 1vw;
+        position: relative;
+        top: 25vw;
     
-        
+        margin-top: 40vw;
+        margin-left: 20vw;
+        margin-right: 1vw;
     }
     
     #away-score {
         font-size: 45pt;
 
-        position: absolute;
-        top: 83vw;
-        right: 50vw;
-        left: 1vw;
-        
+        position: relative;
+        top: 25vw;
+    
+        margin-top: 10vw;
+        margin-left: 1vw;
+        margin-right: 20vw;
     }
     
     .score {
