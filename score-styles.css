@@ -93,27 +93,24 @@
     #home {
         background-color: #4D4D4D;
     
-        font-size: 40pt;
+        font-size: 13vw;
 
         position: relative;
         top: 20vw;
-    
-        margin-top: 10vw;
-        margin-left: 15vw;
-        margin-right: 10vw;
+        left: 5vw;
+        
     }
     
     #away {
         background-color: #4D4D4D;
     
-        font-size: 40pt;
+        font-size: 13vw;
     
         position: relative;
         top: 20vw;
+        right: 5vw;
 
-        margin-top: 10vw;
-        margin-left: 10vw;
-        margin-right: 15vw;
+        
     }
 
     #home-score {
