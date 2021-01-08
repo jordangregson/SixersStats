@@ -8,31 +8,32 @@
 
 .gip {
     color: white;
-    font-size: 14pt;
+    font-size: 3vw;
 }
 
 #gip-answer {
+    font-size: 5vw;
     padding-bottom: 20px;
 }
 
 #away {
     background-color: #4D4D4D;
 
-    font-size: 4vw;
+    font-size: 8vw;
 
     margin-top: 10vw;
     margin-left: 10vw;
-    margin-right: 10vw;
+    margin-right: 12vw;
 }
 
 #home {
     background-color: #4D4D4D;
 
-    font-size: 4vw;
+    font-size: 8vw;
 
     margin-top: 10vw;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
 }
 
 #teams-playing-txt {
@@ -50,7 +51,7 @@
 }
 
 #away-score {
-    font-size: 4vw;
+    font-size: 10vw;
 
     margin-top: 10vw;
     margin-left: 15vw;
@@ -58,7 +59,7 @@
 }
 
 #home-score {
-    font-size: 4vw;
+    font-size: 10vw;
 
     margin-top: 10vw;
     margin-left: 15vw;
@@ -68,6 +69,24 @@
 .score {
     margin-right: 2vw;
     margin-top: 5vw;
+}
+
+#game-start-date {
+    font-size: 5vw;
+    margin-top: 10vw;
+    padding-bottom: 1vw;
+}
+
+.at {
+    font-size: 5vw;
+    margin-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+#game-start-time {
+    font-size: 5vw;
+    margin-top: 1vw;
+    padding-bottom: 5vw;
 }
 
 @media only screen and (max-width: 680px) {
@@ -99,7 +118,7 @@
         top: 20vw;
     
         margin-top: 10vw;
-        margin-left: 13vw;
+        margin-left: 10vw;
         margin-right: 1vw;
     }
     
@@ -123,8 +142,8 @@
         top: 25vw;
     
         margin-top: 40vw;
-        margin-left: 20vw;
-        margin-right: 1vw;
+        margin-left: 7vw;
+        margin-right: 10vw;
     }
     
     #away-score {
@@ -133,8 +152,8 @@
         position: relative;
         top: 25vw;
     
-        margin-top: 10vw;
-        margin-left: 1vw;
+        margin-top: 40vw;
+        margin-left: 8vw;
         margin-right: 20vw;
     }
     
@@ -143,5 +162,23 @@
         margin-top: 5vw;
     }
 
+    #game-start-date {
+        font-size: 8vw;
+        margin-top: 30vw;
+        padding-bottom: 1vw;
+        text-align: center;
+    }
+
+    .at {
+        font-size: 6vw;
+        margin-top: 1vw;
+        padding-bottom: 1vw;
+    }
+    
+    #game-start-time {
+        font-size: 10vw;
+        margin-top: 1vw;
+        padding-bottom: 5vw;
+    }
 
 }

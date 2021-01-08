@@ -70,7 +70,7 @@
         <div class="main-area">
 
             <p class="gip">
-                Is there a game is progress?
+                Is there a game is today?
             </p>
             <p id="gip-answer" class="gip">
                 No
@@ -94,6 +94,16 @@
                     <c id="away-score">0</c>
                     <c id="home-score">0</c>
                 </div>
+
+                <div id="game-start-date">
+                    The next game is
+                </div>
+                <div class="at">
+                    at
+                </div>
+                <div id="game-start-time">
+                    12:00am
+                </div>
                 
             </div>
         </div>
@@ -104,5 +114,10 @@
 <script src="date.js"></script>
 <script src="game-in-progress.js"></script>
 <script src="current-score.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://unpkg.com/dayjs"></script>
+<script src="time-of-game.js"></script>
 
 </html>

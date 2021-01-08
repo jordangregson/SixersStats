@@ -5,13 +5,10 @@ function gameInProgress(apiDate) {
     var today = new Date();
 
     var date = today.getDate();
-    
     var numMonth = today.getMonth();
     var year = today.getFullYear();
 
     var month;
-
-    
 
 
     if (numMonth == "0") {
@@ -75,29 +72,35 @@ function gameInProgress(apiDate) {
             return response.json();
         })
         .then(data => {
-            
+            //THIS IS AN ALGORITHM DESIGNED TO SEE WHICH ARRAY THE SIXERS GAME TAKES PLACE IN
 
             for(var i = 0; i < data.length; i++) {
                 if(data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
-                    if(data[i].HomeTeamScore === "null" && data[i].AwayTeamScore === "null") {
-                        var gameIsNotHappening;
-                        gameIsNotHappening = document.getElementById("gip-answer");
-                        gameIsNotHappening.textContent = "No";
+                    
+                    
+                    if(data[i].AwayTeamScore === "null") {
+                        var zeroPlaceHolder;
+                        zeroPlaceHolder = document.getElementById("away-score");
+                        zeroPlaceHolder.textContent = "0";
+                    } 
+                    
+                    if(data[i].HomeTeamScore === "null") {
+                        console.log("hi");
                     }
 
-                    else if(data[i].HomeTeamScore !== "null" && data[i].AwayTeamScore !== "null") {
-                        var gameIsHappening;
-                        gameIsHappening = document.getElementById("gip-answer");
-                        gameIsHappening.textContent = "Yes";
-                    }
-                    
-                    
 
-                    
+
+
+
                 }
+                
             }
-
 
         })
 }
 gameInProgress();
+
+setInterval(gameInProgress, 30000);
+
+
+

@@ -121,6 +121,17 @@ function gameInProgress(apiDate) {
 
                     }
 
+                    if(data[i].AwayTeamScore === null) {
+                        var zeroPlaceHolderAway;
+                        zeroPlaceHolderAway = document.getElementById("away-score");
+                        zeroPlaceHolderAway.textContent = "0";
+                    } 
+                    
+                    if(data[i].HomeTeamScore === null) {
+                        var zeroPlaceHolderHome;
+                        zeroPlaceHolderHome = document.getElementById("home-score");
+                        zeroPlaceHolderHome.textContent = "0";
+                    }
                     
                     
 
