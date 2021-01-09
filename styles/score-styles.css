@@ -77,7 +77,7 @@
     padding-bottom: 1vw;
 }
 
-.at {
+#at {
     font-size: 5vw;
     margin-top: 1vw;
     padding-bottom: 1vw;
@@ -169,7 +169,7 @@
         text-align: center;
     }
 
-    .at {
+    #at {
         font-size: 6vw;
         margin-top: 1vw;
         padding-bottom: 1vw;

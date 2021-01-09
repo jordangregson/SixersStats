@@ -75,7 +75,14 @@ function gameInProgress(apiDate) {
             return response.json();
         })
         .then(data => {
-            
+            var teamsPlayingTxt = document.getElementById("teams-playing-txt");
+            var awayTeamName = document.getElementById("away");
+            var homeTeamName = document.getElementById("home");
+            var awayTeamScore = document.getElementById("away-score");
+            var homeTeamScore = document.getElementById("home-score");
+            var nextgameDate = document.getElementById("game-start-date");
+            var at = document.getElementById("at");
+            var nextgameTime = document.getElementById("game-start-time");
 
             for(var i = 0; i < data.length; i++) {
                 if(data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
@@ -83,6 +90,15 @@ function gameInProgress(apiDate) {
                         var gameIsNotHappening;
                         gameIsNotHappening = document.getElementById("gip-answer");
                         gameIsNotHappening.textContent = "No";
+
+                        teamsPlayingTxt.textContent = "";
+                        awayTeamName.textContent = "";
+                        homeTeamName.textContent = "";
+                        awayTeamScore.textContent = "";
+                        homeTeamScore.textContent = "";
+                        nextgameDate.textContent = "";
+                        at.textContent = "";
+                        nextgameTime.textContent = "";
                     }
 
                     else if(data[i].HomeTeamScore !== "null" && data[i].AwayTeamScore !== "null") {

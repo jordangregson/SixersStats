@@ -131,11 +131,10 @@ function gameInProgress(apiDate) {
                         gameIsHappening.textContent = "Yes";
                     }
                     console.log(data[i].DateTime)
-
                    
                     
                     var displayedDate = dayjs(data[i].DateTime).format('dddd, MMM D, YYYY');
-                    var displayedTime = dayjs(data[i].DateTime).format('h:ma');
+                    var displayedTime = dayjs(data[i].DateTime).format('h:mma');
                     
 
                     var gameTime = document.getElementById("game-start-date");
@@ -144,6 +143,8 @@ function gameInProgress(apiDate) {
                     var gameDate = document.getElementById("game-start-time");
                     gameDate.textContent = displayedTime;
                 }
+
+                
             }
 
 
