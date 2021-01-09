@@ -83,24 +83,6 @@ function gameInProgress(apiDate) {
                         var gameIsNotHappening;
                         gameIsNotHappening = document.getElementById("gip-answer");
                         gameIsNotHappening.textContent = "No";
-
-                        var teamsPlayingTxt = document.getElementById("teams-playing-txt");
-                        var awayTeamName = document.getElementById("away");
-                        var homeTeamName = document.getElementById("home");
-                        var awayTeamScore = document.getElementById("away-score");
-                        var homeTeamScore = document.getElementById("home-score");
-                        var nextgameDate = document.getElementById("game-start-date");
-                        var at = document.getElementById("at");
-                        var nextgameTime = document.getElementById("game-start-time");
-
-                        teamsPlayingTxt.textContent = "";
-                        awayTeamName.textContent = "";
-                        homeTeamName.textContent = "";
-                        awayTeamScore.textContent = "";
-                        homeTeamScore.textContent = "";
-                        nextgameDate.textContent = "";
-                        at.textContent = "";
-                        nextgameTime.textContent = "";
                     }
 
                     else if (data[i].HomeTeamScore !== "null" && data[i].AwayTeamScore !== "null") {
