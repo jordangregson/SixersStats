@@ -5,13 +5,13 @@ function gameInProgress(apiDate) {
     var today = new Date();
 
     var date = today.getDate();
-    
+
     var numMonth = today.getMonth();
     var year = today.getFullYear();
 
     var month;
 
-    
+
 
 
     if (numMonth == "0") {
@@ -62,7 +62,7 @@ function gameInProgress(apiDate) {
         month = "Dec";
     }
 
-    
+
 
     var apiDate;
     apiDate = year + "-" + month + "-" + date;
@@ -75,21 +75,23 @@ function gameInProgress(apiDate) {
             return response.json();
         })
         .then(data => {
-            var teamsPlayingTxt = document.getElementById("teams-playing-txt");
-            var awayTeamName = document.getElementById("away");
-            var homeTeamName = document.getElementById("home");
-            var awayTeamScore = document.getElementById("away-score");
-            var homeTeamScore = document.getElementById("home-score");
-            var nextgameDate = document.getElementById("game-start-date");
-            var at = document.getElementById("at");
-            var nextgameTime = document.getElementById("game-start-time");
 
-            for(var i = 0; i < data.length; i++) {
-                if(data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
-                    if(data[i].HomeTeamScore === "null" && data[i].AwayTeamScore === "null") {
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
+                    if (data[i].HomeTeamScore === "null" && data[i].AwayTeamScore === "null") {
                         var gameIsNotHappening;
                         gameIsNotHappening = document.getElementById("gip-answer");
                         gameIsNotHappening.textContent = "No";
+
+                        var teamsPlayingTxt = document.getElementById("teams-playing-txt");
+                        var awayTeamName = document.getElementById("away");
+                        var homeTeamName = document.getElementById("home");
+                        var awayTeamScore = document.getElementById("away-score");
+                        var homeTeamScore = document.getElementById("home-score");
+                        var nextgameDate = document.getElementById("game-start-date");
+                        var at = document.getElementById("at");
+                        var nextgameTime = document.getElementById("game-start-time");
 
                         teamsPlayingTxt.textContent = "";
                         awayTeamName.textContent = "";
@@ -101,15 +103,15 @@ function gameInProgress(apiDate) {
                         nextgameTime.textContent = "";
                     }
 
-                    else if(data[i].HomeTeamScore !== "null" && data[i].AwayTeamScore !== "null") {
+                    else if (data[i].HomeTeamScore !== "null" && data[i].AwayTeamScore !== "null") {
                         var gameIsHappening;
                         gameIsHappening = document.getElementById("gip-answer");
                         gameIsHappening.textContent = "Yes";
                     }
-                    
-                    
 
-                    
+
+
+
                 }
             }
 
