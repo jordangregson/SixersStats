@@ -89,6 +89,10 @@
     padding-bottom: 5vw;
 }
 
+#status {
+    font-size: 3vw;
+}
+
 @media only screen and (max-width: 680px) {
 
     .gip {

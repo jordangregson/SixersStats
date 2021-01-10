@@ -14,6 +14,10 @@ function gameInProgress(apiDate) {
     var month;
     var date;
 
+    var hour = today.getHours();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();
+
 
     //ADJUSTING THE STYLE OF THE DAY
     if (numDate == "1") {
@@ -102,8 +106,139 @@ function gameInProgress(apiDate) {
         month = "12";
     }
 
-    
+    //ADJUSTING THE TIME LAYOUT
+    var numHour;
+    var numMin;
 
+    if(hour == "0") {
+        hour = 12;
+    }
+
+    if(hour == "1") {
+        hour = 01;
+    }
+
+    if(hour == "2") {
+        hour = 02;
+    }
+
+    if(hour == "3") {
+        hour = 03;
+    }
+
+    if(hour == "4") {
+        hour = 04;
+    }
+
+    if(hour == "5") {
+        hour = 05;
+    }
+
+    if(hour == "6") {
+        hour = 06;
+    }
+
+    if(hour == "7") {
+        hour = 07;
+    }
+
+    if(hour == "8") {
+        hour = 08;
+    }
+
+    if(hour == "9") {
+        hour = 09;
+    }
+
+    //MINUTES
+
+    if(minutes == "0") {
+        minutes = 00;
+    }
+
+    if(minutes == "1") {
+        minutes = 01;
+    }
+
+    if(minutes == "2") {
+        minutes = 02;
+    }
+
+    if(minutes == "3") {
+        minutes = 03;
+    }
+
+    if(minutes == "4") {
+        minutes = 04;
+    }
+
+    if(minutes == "5") {
+        minutes = 05;
+    }
+
+    if(minutes == "6") {
+        minutes = 06;
+    }
+
+    if(minutes == "7") {
+        minutes = 07;
+    }
+
+    if(minutes == "8") {
+        minutes = 08;
+    }
+
+    if(minutes == "9") {
+        minutes = 09;
+    }
+
+
+    //SECONDS
+
+    if(seconds == "0") {
+        seconds = 00;
+    }
+
+    if(seconds == "1") {
+        seconds = 01;
+    }
+
+    if(seconds == "2") {
+        seconds = 02;
+    }
+
+    if(seconds == "3") {
+        seconds = 03;
+    }
+
+    if(seconds == "4") {
+        seconds = 04;
+    }
+
+    if(seconds == "5") {
+        seconds = 05;
+    }
+
+    if(seconds == "6") {
+        seconds = 06;
+    }
+
+    if(seconds == "7") {
+        seconds = 07;
+    }
+
+    if(seconds == "8") {
+        seconds = 08;
+    }
+
+    if(seconds == "9") {
+        seconds = 09;
+    }
+
+    var dateTime = year + "-" + month + "-" + numDate + "T" + hour + ":" + minutes + ":" + seconds;
+
+
+    console.log(dateTime);
     var apiDate;
     apiDate = year + "-" + month + "-" + date;
 
@@ -118,7 +253,7 @@ function gameInProgress(apiDate) {
             
 
             for(var i = 0; i < data.length; i++) {
-                if(data[i].HomeTeamID === 7 | data[i].AwayTeamID === 7) {
+                if(data[i].HomeTeamID === 13 | data[i].AwayTeamID === 13) {
                     if(data[i].HomeTeamScore === "null" && data[i].AwayTeamScore === "null") {
                         var gameIsNotHappening;
                         gameIsNotHappening = document.getElementById("gip-answer");
@@ -130,7 +265,7 @@ function gameInProgress(apiDate) {
                         gameIsHappening = document.getElementById("gip-answer");
                         gameIsHappening.textContent = "Yes";
                     }
-                    console.log(data[i].DateTime)
+                    
                    
                     
                     var displayedDate = dayjs(data[i].DateTime).format('dddd, MMM D, YYYY');
@@ -144,6 +279,20 @@ function gameInProgress(apiDate) {
                     gameDate.textContent = displayedTime;
                 }
 
+                if(data[i].DateTime <= dateTime) {
+                    var gameTime = document.getElementById("game-start-date");
+                    gameTime.textContent = "  ";
+
+                    var at = document.getElementById("at");
+                    at.textContent = "  ";
+
+                    var gameDate = document.getElementById("game-start-time");
+                    gameDate.textContent = "  ";
+                    
+
+                }
+
+                
                 
             }
 

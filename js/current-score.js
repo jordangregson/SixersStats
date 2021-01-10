@@ -95,6 +95,10 @@ function gameInProgress(apiDate) {
                         sixersHome = document.getElementById("home-score");
                         sixersHome.textContent = data[i].HomeTeamScore;
                         
+                        var gameStatus;
+                        gameStatus = document.getElementById("status");
+                        gameStatus.textContent = data[i].Status;
+                        
 
                     }
 
@@ -102,9 +106,16 @@ function gameInProgress(apiDate) {
                         var sixersAway;
                         sixersAway = document.getElementById("away-score");
                         sixersAway.textContent = data[i].AwayTeamScore;
+
+                        var gameStatus;
+                        gameStatus = document.getElementById("status");
+                        gameStatus.textContent = data[i].Status;
+                        
                     
 
                     }
+
+                    
 
                     if(data[i].HomeTeamID !== 7) {
                         var opponentHome;
@@ -133,7 +144,7 @@ function gameInProgress(apiDate) {
                         zeroPlaceHolderHome.textContent = "0";
                     }
                     
-                    
+                    console.log(data[i])
 
 
 
