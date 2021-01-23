@@ -100,7 +100,7 @@ function gameInProgress(apiDate) {
 }
 gameInProgress();
 
-setInterval(gameInProgress, 30000);
+//setInterval(gameInProgress, 300000);
 
 
 
